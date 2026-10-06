@@ -1,4 +1,4 @@
-# Mayuresh — Personal Site
+# Mayuresh's Personal Site
 
 Personal site and blog, built with [Astro](https://astro.build).
 

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { SITE_TITLE, SITE_DESCRIPTION, SOCIAL_LINKS } from '../consts';
+import Icon from '../components/Icon.astro';
 
 interface Props {
 	title?: string;
@@ -39,10 +40,21 @@ const pageTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
 		<footer class="site-footer">
 			<div class="wrapper footer-inner">
 				<div class="socials">
-					<a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-					<a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-					<a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer">X</a>
-					<a href={SOCIAL_LINKS.email}>Email</a>
+					<a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer">
+						<Icon name="github" /><span>GitHub</span>
+					</a>
+					<a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer">
+						<Icon name="linkedin" /><span>LinkedIn</span>
+					</a>
+					<a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer">
+						<Icon name="twitter" /><span>X</span>
+					</a>
+					<a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer">
+						<Icon name="youtube" /><span>YouTube</span>
+					</a>
+					<a href={SOCIAL_LINKS.email}>
+						<Icon name="email" /><span>Email</span>
+					</a>
 				</div>
 				<p class="copyright">&copy; {new Date().getFullYear()} Mayuresh Srivastava</p>
 			</div>
@@ -104,6 +116,9 @@ const pageTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
 	}
 
 	.socials a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
 		color: var(--color-text-muted);
 	}
 
