@@ -12,9 +12,27 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+const postURL = new URL(`/blog/${post.id}/`, Astro.site).toString();
+const blogPostingSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	headline: post.data.title,
+	description: post.data.description,
+	datePublished: post.data.pubDate.toISOString(),
+	url: postURL,
+	mainEntityOfPage: postURL,
+	author: {
+		'@type': 'Person',
+		name: 'Mayuresh Srivastava',
+		url: Astro.site?.toString(),
+	},
+};
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
+	<script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+
 	<article>
 		<header class="post-header">
 			<h1>{post.data.title}</h1>
