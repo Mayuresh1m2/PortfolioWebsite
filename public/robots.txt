@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mayureshsrivastava.com/sitemap-index.xml

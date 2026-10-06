@@ -5,9 +5,23 @@ import profile from '../assets/images/profile.jpg';
 import guitarStage from '../assets/images/guitar-stage.jpg';
 import guitarAcoustic from '../assets/images/guitar-acoustic.jpg';
 import piano from '../assets/images/piano.jpg';
+import { SOCIAL_LINKS } from '../consts';
+
+const personSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Mayuresh Srivastava',
+	url: Astro.site?.toString(),
+	image: new URL('/og-image.jpg', Astro.site).toString(),
+	description:
+		"Builder of distributed systems, platforms, and the occasional guitar riff. 15 years across Samsung, Amazon, and Maersk.",
+	sameAs: [SOCIAL_LINKS.github, SOCIAL_LINKS.linkedin, SOCIAL_LINKS.twitter, SOCIAL_LINKS.youtube],
+};
 ---
 
 <Layout>
+	<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
 	<section class="intro">
 		<Image class="avatar" src={profile} alt="Mayuresh" width={120} height={120} />
 		<div>
@@ -69,7 +83,7 @@ import piano from '../assets/images/piano.jpg';
 			holes simply because something is interesting.
 		</p>
 
-		<h3>Engineering</h3>
+		<h2>Engineering</h2>
 
 		<p>My professional journey has moved across domains rather than staying confined to one layer of the stack.</p>
 
@@ -133,7 +147,7 @@ import piano from '../assets/images/piano.jpg';
 		margin: 0;
 	}
 
-	.about h3 {
+	.about h2 {
 		margin-top: 2.5rem;
 	}
 
