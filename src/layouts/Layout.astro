@@ -1,0 +1,146 @@
+---
+import '../styles/global.css';
+import { SITE_TITLE, SITE_DESCRIPTION, SOCIAL_LINKS } from '../consts';
+import Icon from '../components/Icon.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title, description = SITE_DESCRIPTION } = Astro.props;
+const pageTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<script is:inline>
+			(function () {
+				try {
+					var stored = localStorage.getItem('theme');
+					if (stored === 'light' || stored === 'dark') {
+						document.documentElement.setAttribute('data-theme', stored);
+					}
+				} catch (e) {}
+			})();
+		</script>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="wrapper nav-inner">
+				<a class="brand" href="/">Mayuresh</a>
+				<nav>
+					<a href="/">About</a>
+					<a href="/blog">Blog</a>
+					<ThemeToggle />
+				</nav>
+			</div>
+		</header>
+
+		<main class="wrapper">
+			<slot />
+		</main>
+
+		<footer class="site-footer">
+			<div class="wrapper footer-inner">
+				<div class="socials">
+					<a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer">
+						<Icon name="github" /><span>GitHub</span>
+					</a>
+					<a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer">
+						<Icon name="linkedin" /><span>LinkedIn</span>
+					</a>
+					<a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer">
+						<Icon name="twitter" /><span>X</span>
+					</a>
+					<a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer">
+						<Icon name="youtube" /><span>YouTube</span>
+					</a>
+					<a href={SOCIAL_LINKS.email}>
+						<Icon name="email" /><span>Email</span>
+					</a>
+				</div>
+				<p class="copyright">&copy; {new Date().getFullYear()} Mayuresh Srivastava</p>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style>
+	.site-header {
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.nav-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 1.25rem;
+		padding-bottom: 1.25rem;
+	}
+
+	.brand {
+		color: var(--color-text);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	nav a {
+		color: var(--color-text-muted);
+	}
+
+	nav a:hover {
+		color: var(--color-text);
+		text-decoration: none;
+	}
+
+	.site-footer {
+		border-top: 1px solid var(--color-border);
+		margin-top: 2rem;
+	}
+
+	.footer-inner {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		color: var(--color-text-muted);
+		font-size: 0.9rem;
+	}
+
+	.socials {
+		display: flex;
+		gap: 1.25rem;
+	}
+
+	.socials a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		color: var(--color-text-muted);
+	}
+
+	.socials a:hover {
+		color: var(--color-accent);
+		text-decoration: none;
+	}
+
+	.copyright {
+		margin: 0;
+	}
+</style>

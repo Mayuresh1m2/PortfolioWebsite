@@ -1,17 +1,173 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import profile from '../assets/images/profile.jpg';
+import guitarStage from '../assets/images/guitar-stage.jpg';
+import guitarAcoustic from '../assets/images/guitar-acoustic.jpg';
+import piano from '../assets/images/piano.jpg';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<section class="intro">
+		<Image class="avatar" src={profile} alt="Mayuresh" width={120} height={120} />
+		<div>
+			<h1>About Me</h1>
+			<p class="title">Builder of distributed systems, platforms, and the occasional guitar riff.</p>
+		</div>
+	</section>
+
+	<section class="about">
+		<p>
+			I like building things, understanding how they work, and finding structure in seemingly
+			complicated problems.
+		</p>
+
+		<p>
+			I've spent the last 15 years working across different layers of software, from mobile
+			applications and SDKs to backend systems, distributed platforms, cloud infrastructure, and
+			ML platforms. My career has taken me through Samsung, Amazon, and Maersk, where I've had the
+			opportunity to work on everything from software running on flagship mobile devices to
+			platforms processing millions of requests a day and systems that bring machine learning into
+			business workflows.
+		</p>
+
+		<p>What has stayed constant is my fascination with <strong>structure</strong>.</p>
+
+		<p>
+			I enjoy taking something complex, breaking it down into its fundamental pieces,
+			understanding how those pieces interact, and then finding the right abstractions to put it
+			back together. That's probably why distributed systems and platform engineering have always
+			felt natural to me. Good architecture, to me, is often about discovering the underlying
+			structure of a problem and making it simpler for everyone else.
+		</p>
+
+		<p>Interestingly, I find the same satisfaction in music.</p>
+
+		<p>
+			Music is an incredibly structured system: notes, scales, intervals, rhythm, harmony and
+			patterns all fitting together to create something that feels intuitive and expressive. I
+			enjoy exploring that structure through the guitar and piano/keyboard. I'm not trying to be a
+			great musician; I simply enjoy being able to pick up an instrument, understand a little more
+			of the underlying system, and then use that understanding to make something.
+		</p>
+
+		<div class="photo-row">
+			<figure>
+				<Image src={guitarStage} alt="Playing electric guitar on stage" width={400} height={533} />
+			</figure>
+			<figure>
+				<Image src={piano} alt="Playing piano/keyboard" width={400} height={300} />
+			</figure>
+			<figure>
+				<Image src={guitarAcoustic} alt="Playing acoustic guitar at home" width={400} height={300} />
+			</figure>
+		</div>
+
+		<p>
+			That curiosity extends beyond engineering too. I like learning how things work,
+			experimenting with new ideas, and occasionally going down completely unnecessary rabbit
+			holes simply because something is interesting.
+		</p>
+
+		<h3>Engineering</h3>
+
+		<p>My professional journey has moved across domains rather than staying confined to one layer of the stack.</p>
+
+		<p>
+			I started with enterprise backend systems, moved into mobile and SDK development at
+			Samsung, then spent several years at Amazon building distributed and ML platforms, and most
+			recently worked at Maersk on large-scale logistics platforms, developer platforms, and
+			workflow systems.
+		</p>
+
+		<p>
+			Working across mobile and backend has shaped how I think about software. I've seen problems
+			from both ends: the experience of the developer or user consuming a platform, and the
+			complexity of the systems underneath it.
+		</p>
+
+		<p>
+			Today, I'm particularly interested in <strong
+				>distributed systems, platform engineering, AI/ML platforms, developer productivity, and
+				the architecture that connects all of them</strong
+			>.
+		</p>
+
+		<p>
+			I enjoy problems where the answer isn't obvious, where you have to understand the
+			system, find the real constraint, make the right trade-offs, and build something that gives
+			other people leverage.
+		</p>
+
+		<p>
+			And outside of all of that, you'll probably find me with a guitar, a keyboard, or exploring
+			some new idea that I probably didn't need to explore.
+		</p>
+	</section>
+</Layout>
+
+<style>
+	.intro {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.intro :global(.avatar) {
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		object-fit: cover;
+		flex-shrink: 0;
+		border: 1px solid var(--color-border);
+	}
+
+	.intro h1 {
+		font-size: 2.25rem;
+		margin: 0 0 0.25rem;
+	}
+
+	.title {
+		color: var(--color-text-muted);
+		margin: 0;
+	}
+
+	.about h3 {
+		margin-top: 2.5rem;
+	}
+
+	.photo-row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.75rem;
+		margin: 2rem 0;
+	}
+
+	.photo-row figure {
+		margin: 0;
+	}
+
+	.photo-row :global(img) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 8px;
+		aspect-ratio: 3 / 4;
+	}
+
+	@media (max-width: 36rem) {
+		.intro {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.photo-row {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.photo-row figure:first-child {
+			grid-column: 1 / -1;
+		}
+	}
+</style>
