@@ -1,17 +1,43 @@
 :root {
 	color-scheme: light dark;
 
+	/* light theme (default / fallback) */
+	--color-bg: #ffffff;
+	--color-bg-raised: #f1f3f5;
+	--color-text: #1a1d23;
+	--color-text-muted: #5b6270;
+	--color-accent: #0284c7;
+	--color-border: #e2e4e9;
+
+	--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+	--font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+	--max-width: 42rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		--color-bg: #0f1115;
+		--color-bg-raised: #171a21;
+		--color-text: #e4e6eb;
+		--color-text-muted: #9aa0ad;
+		--color-accent: #7dd3fc;
+		--color-border: #2a2e38;
+	}
+}
+
+:root[data-theme='dark'] {
+	color-scheme: dark;
 	--color-bg: #0f1115;
 	--color-bg-raised: #171a21;
 	--color-text: #e4e6eb;
 	--color-text-muted: #9aa0ad;
 	--color-accent: #7dd3fc;
 	--color-border: #2a2e38;
+}
 
-	--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-	--font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-
-	--max-width: 42rem;
+:root[data-theme='light'] {
+	color-scheme: light;
 }
 
 * {
@@ -30,6 +56,7 @@ body {
 	font-family: var(--font-sans);
 	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
+	transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 a {
