@@ -55,6 +55,18 @@ const blogPostingSchema = {
 				}
 			</p>
 		</header>
+		{
+			post.data.tldr && (
+				<aside class="tldr" aria-label="TL;DR">
+					<p class="tldr-label">TL;DR</p>
+					<ul>
+						{post.data.tldr.map((point) => (
+							<li>{point}</li>
+						))}
+					</ul>
+				</aside>
+			)
+		}
 		<div class="content">
 			<Content />
 		</div>
@@ -92,8 +104,53 @@ const blogPostingSchema = {
 		font-size: 0.8rem;
 	}
 
+	.tldr {
+		background: var(--color-bg-raised);
+		border-left: 3px solid var(--color-accent);
+		border-radius: 0 8px 8px 0;
+		padding: 1rem 1.25rem;
+		margin-bottom: 2rem;
+	}
+
+	.tldr-label {
+		margin: 0 0 0.5rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		color: var(--color-text-muted);
+	}
+
+	.tldr ul {
+		margin: 0;
+		padding-left: 1.25rem;
+	}
+
+	.tldr li + li {
+		margin-top: 0.4rem;
+	}
+
 	.content :global(h2) {
 		margin-top: 2rem;
+	}
+
+	/* Markdown images carry width/height attributes; keep their aspect ratio when max-width shrinks them */
+	.content :global(img) {
+		height: auto;
+	}
+
+	.content :global(table) {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 1.5rem 0;
+		font-size: 0.95rem;
+	}
+
+	.content :global(th),
+	.content :global(td) {
+		text-align: left;
+		vertical-align: top;
+		padding: 0.5rem 0.75rem;
+		border-bottom: 1px solid var(--color-border);
 	}
 
 	.back {
