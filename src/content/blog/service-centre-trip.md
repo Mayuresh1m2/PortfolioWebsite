@@ -3,6 +3,11 @@ title: "The service centre trip I didn't make"
 description: "How my slow 2015 Lenovo got an SSD and more RAM, with me doing the hardware work and Claude talking me through it, plus the before and after numbers."
 pubDate: 2026-10-13
 tags: ["hardware", "linux", "ai"]
+tldr:
+  - "My 2015 Lenovo Z51-70 was slow because of a spinning hard disk and RAM filled by things I'd forgotten about: a k3s cluster in Docker and the Hermes agent."
+  - "I swapped in a 512GB SSD and added a second 8GB stick of RAM myself, with Claude talking me through each step from photos. The parts came to about ₹11,500."
+  - "Random reads went up roughly 80 times, RAM went from about 7GB usable to 16GB, and it boots in 32.5 seconds."
+  - "Claude was wrong more than once, so the final call stayed with me. Still, it's the first time a hardware fix felt like debugging."
 ---
 
 In August I pulled out my old Lenovo Z51-70 and set it up again. It's a 2015 model with an i7-5500U, 8GB of RAM, a 1TB hard disk and Ubuntu, and it was very slow. Before spending money on a new laptop, I wanted to know whether this one could be saved.
