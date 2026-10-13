@@ -133,6 +133,22 @@ smartctl says the drive is healthy, with no reallocated sectors, and it runs at 
 
 Not everything changed. On 13 October, after eight days of uptime, swap was nearly full again, 3.76 of 4GiB in the fastfetch screenshot, mostly from IntelliJ and Firefox. The difference is that swap now lives on an SSD, where it hurts far less.
 
+## Using it now
+
+The numbers are one thing, but the real test is what I use it for. I work on this website on this laptop. The dev server, the builds and Claude Code all run here, and a full build of the site takes about four seconds.
+
+As I write this, it has been up for eight days. IntelliJ, Firefox, the Claude and ChatGPT desktop apps, Claude Code and the site's dev server are all open at once. Firefox is the hungriest, at about 7GB across its tabs, and IntelliJ takes another 2.5GB. The four CPU threads are mostly idle, with a load average of about 1.
+
+It used to be a different machine. Even typing would hang. Switching from one window to another meant staring at the screen for a few seconds, and just starting it up was a pain. Some of that was my own doing, stray experiments like k3s and Hermes left running in the background. Clearing those out helped, but the hard disk was still slow on its own.
+
+Now typing is seamless and switching windows doesn't keep me waiting. It's actually usable.
+
+## What it's for now
+
+Usable doesn't mean it becomes my workstation. It's still a laptop with a 2015 processor, and I won't be doing my main work on it.
+
+What I do plan is to use it as a simple server at home. It can host a few utilities, and maybe some small local models. With 16GB of RAM and an SSD, it's finally up to that. Background experiments are what slowed it down in the first place, so it's a little funny that they're now its job. This time they'll be on purpose.
+
 ## What could have gone wrong
 
 I don't want this to sound risk-free, because it isn't. Forcing that cover would have cracked it, and yanking the ribbon cable could have damaged a part that had nothing to do with the upgrade. A dead RAM stick is easy to mistake for a dead slot, and a `grub>` prompt is easy to panic at.
