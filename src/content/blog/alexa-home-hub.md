@@ -11,7 +11,7 @@ tldr:
   - "Next: \"Alexa, ask ramesh dude to clean my house.\""
 ---
 
-At the end of my last post I said the old Lenovo would become a small server at home, and that the next thing on my list was a home hub. This is the first version of it.
+At the end of [my last post](/blog/service-centre-trip/) I said the old Lenovo would become a small server at home, and that the next thing on my list was a home hub. This is the first version of it.
 
 It doesn't control any devices yet. What it does is smaller, and it was the part I was least sure about: I talk to my Echo, the question goes to the laptop, the laptop works out what I want, does it, and Alexa reads the answer back.
 
