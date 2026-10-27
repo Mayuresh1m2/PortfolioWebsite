@@ -155,5 +155,10 @@ A warning worth repeating: this is the one part of the system that reaches outsi
 - Room-by-room cleaning, which finally means dealing with that "clean these rooms" action and the robot's map.
 - Reporting a "stuck" fault on its own, instead of only when I ask.
 - A nickname for the vacuum, so Ramesh dude can hand the job to it by name, the way the plan always wanted.
+- A journal of what the house did each day, built from the hub's own logs, and routines it can suggest from the things I actually repeat. All of it read and written on the machine, nothing uploaded.
+
+## What local buys
+
+Everything that makes this work already runs on the machine: the model that picks the tool, the policy that allows or refuses it, and a log of every command it runs or refuses. The next thing I want to try is letting the house learn from that without any of it leaving. Read the log back and it can write me a plain journal of the day, and point out the routines I repeat often enough to be worth automating. It suggests, I approve. A pattern it notices becomes a proposal, never a command that moves a device on its own. The further this goes, the less the house needs anyone else's cloud to be useful.
 
 The rule from the start still holds, with one exception. The house does its own thinking, and nothing leaves it that I wouldn't say on a phone call. The vacuum is that exception: one command, to one cloud, for one robot, and the hub says so when the robot it just "started" is sitting perfectly still with an empty tank.
