@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#374151"/>
+    </marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="700" rx="16" fill="#ffffff"/>
+
+  <!-- Cloud zone: Amazon / AWS -->
+  <rect x="20" y="20" width="960" height="180" rx="12" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="40" y="48" font-size="16" font-weight="700" fill="#9a3412">Amazon and AWS (Sydney)</text>
+  <g font-size="15" fill="#1f2937" text-anchor="middle">
+    <rect x="40" y="74" width="200" height="100" rx="10" fill="#fff" stroke="#f59e0b"/>
+    <text x="140" y="120" font-weight="700">Alexa</text><text x="140" y="144" font-size="13" fill="#4b5563">speech to text</text>
+    <rect x="300" y="74" width="200" height="100" rx="10" fill="#fff" stroke="#f59e0b"/>
+    <text x="400" y="120" font-weight="700">Skill Lambda</text><text x="400" y="144" font-size="13" fill="#4b5563">waits up to 5 s</text>
+    <rect x="560" y="74" width="200" height="100" rx="10" fill="#fff" stroke="#f59e0b"/>
+    <text x="660" y="120" font-weight="700">IoT Core</text><text x="660" y="144" font-size="13" fill="#4b5563">message broker</text>
+  </g>
+  <g stroke="#374151" stroke-width="2" fill="none" marker-end="url(#a)">
+    <line x1="242" y1="124" x2="298" y2="124"/>
+    <line x1="502" y1="124" x2="558" y2="124"/>
+  </g>
+  <text x="790" y="118" font-size="13" fill="#4b5563">replies return</text>
+  <text x="790" y="136" font-size="13" fill="#4b5563">the same way</text>
+
+  <!-- Home zone -->
+  <rect x="20" y="240" width="600" height="440" rx="12" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.5"/>
+  <text x="40" y="268" font-size="16" font-weight="700" fill="#155e75">My home network</text>
+
+  <rect x="40" y="292" width="190" height="92" rx="10" fill="#fff" stroke="#0891b2"/>
+  <text x="135" y="326" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Echo</text>
+  <text x="135" y="348" font-size="12" fill="#4b5563" text-anchor="middle">"ask ramesh dude</text>
+  <text x="135" y="366" font-size="12" fill="#4b5563" text-anchor="middle">to clean the house"</text>
+
+  <!-- Hub -->
+  <rect x="40" y="404" width="560" height="150" rx="10" fill="#fff" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="58" y="428" font-size="15" font-weight="700" fill="#1f2937">The 2015 laptop: Hearth hub</text>
+  <g font-size="14" fill="#1f2937" text-anchor="middle">
+    <rect x="52" y="440" width="168" height="96" rx="8" fill="#f0f9ff" stroke="#7dd3fc"/>
+    <text x="136" y="480" font-weight="700">qwen2.5:3b</text><text x="136" y="502" font-size="12" fill="#4b5563">picks clean_house</text>
+    <rect x="238" y="440" width="168" height="96" rx="8" fill="#f0f9ff" stroke="#7dd3fc"/>
+    <text x="322" y="480" font-weight="700">Policy check</text><text x="322" y="502" font-size="12" fill="#4b5563">online and idle</text>
+    <rect x="424" y="440" width="168" height="96" rx="8" fill="#f0f9ff" stroke="#7dd3fc"/>
+    <text x="508" y="472" font-weight="700">Vacuum adapter</text><text x="508" y="492" font-size="12" fill="#4b5563">armed: reads the</text><text x="508" y="508" font-size="12" fill="#4b5563">fault first</text>
+  </g>
+  <g stroke="#374151" stroke-width="2" fill="none" marker-end="url(#a)">
+    <line x1="220" y1="488" x2="236" y2="488"/>
+    <line x1="406" y1="488" x2="422" y2="488"/>
+  </g>
+
+  <!-- Robot -->
+  <rect x="40" y="576" width="190" height="86" rx="10" fill="#fff" stroke="#0891b2"/>
+  <text x="135" y="612" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Robot vacuum</text>
+  <text x="135" y="634" font-size="12" fill="#4b5563" text-anchor="middle">Dreame L10 Prime</text>
+
+  <text x="250" y="586" font-size="13" fill="#155e75">Nothing here accepts</text>
+  <text x="250" y="604" font-size="13" fill="#155e75">connections from the internet.</text>
+
+  <!-- Dreame cloud zone -->
+  <rect x="645" y="240" width="335" height="440" rx="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="665" y="268" font-size="16" font-weight="700" fill="#991b1b">Dreame cloud (Singapore)</text>
+  <rect x="665" y="300" width="295" height="120" rx="10" fill="#fff" stroke="#f87171"/>
+  <text x="812" y="350" font-size="15" font-weight="700" fill="#991b1b" text-anchor="middle">Dreame cloud</text>
+  <text x="812" y="374" font-size="12" fill="#7f1d1d" text-anchor="middle">the vacuum's only</text>
+  <text x="812" y="392" font-size="12" fill="#7f1d1d" text-anchor="middle">control path</text>
+  <text x="665" y="472" font-size="15" font-weight="700" fill="#b91c1c">The one hop that</text>
+  <text x="665" y="494" font-size="15" font-weight="700" fill="#b91c1c">leaves the house.</text>
+  <text x="665" y="528" font-size="13" fill="#7f1d1d">The command travels to</text>
+  <text x="665" y="546" font-size="13" fill="#7f1d1d">Singapore and back —</text>
+  <text x="665" y="564" font-size="13" fill="#7f1d1d">to a robot in the same room.</text>
+
+  <!-- Voice link: Echo <-> Alexa -->
+  <line x1="135" y1="292" x2="135" y2="176" stroke="#374151" stroke-width="2" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="145" y="232" font-size="13" fill="#4b5563">voice</text>
+
+  <!-- Cloud <-> hub: one connection the laptop dials out -->
+  <g stroke="#0e7490" stroke-width="2" stroke-dasharray="6 5" fill="none">
+    <line x1="565" y1="176" x2="565" y2="402" marker-end="url(#a)"/>
+    <line x1="600" y1="402" x2="600" y2="176" marker-end="url(#a)"/>
+  </g>
+  <text x="455" y="214" font-size="13" fill="#0e7490">command / reply</text>
+  <text x="455" y="232" font-size="12" fill="#4b5563">one connection, the laptop dials out</text>
+
+  <!-- Adapter <-> Dreame cloud -->
+  <path d="M592 472 L663 352" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#r)"/>
+  <path d="M663 394 L592 514" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#r)"/>
+  <text x="602" y="430" font-size="12" font-weight="700" fill="#b91c1c">START</text>
+  <text x="602" y="498" font-size="12" font-weight="700" fill="#b91c1c">ok / fault 107</text>
+
+  <!-- Dreame cloud -> robot (the long way round) -->
+  <path d="M770 430 C700 620, 460 648, 234 632" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 5" fill="none" marker-end="url(#r)"/>
+  <text x="300" y="672" font-size="13" font-weight="700" fill="#b91c1c">Dreame relays it to the robot in your house</text>
+</svg>
