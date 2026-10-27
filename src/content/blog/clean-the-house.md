@@ -155,6 +155,8 @@ A warning worth repeating: this is the one part of the system that reaches outsi
 - Room-by-room cleaning, which finally means dealing with that "clean these rooms" action and the robot's map.
 - Reporting a "stuck" fault on its own, instead of only when I ask.
 - A nickname for the vacuum, so Ramesh dude can hand the job to it by name, the way the plan always wanted.
+- More devices, and this time ones that stay inside the house, unlike the vacuum. Lights, plugs, and sensors over Matter, which is local by design, so "turn off the bedroom light" would never need a vendor's cloud at all.
+- Everyday lists the hub keeps as plain files on the machine: a shopping list and bill reminders, so "add milk to the groceries" and "when's the rent due" are answered from home and not from someone's server. Actually placing a grocery order is the one bit that would reach outside, the way the vacuum does, so that's the part I'd make it propose and wait for a yes before it spends a rupee.
 - A journal of what the house did each day, built from the hub's own logs, and routines it can suggest from the things I actually repeat. All of it read and written on the machine, nothing uploaded.
 
 ## What local buys
