@@ -17,7 +17,7 @@ It ended up being a laptop, a phone and a projector, code written with Claude Co
 
 <figure>
   <video controls preload="metadata" playsinline style="width:100%;height:auto;border-radius:6px">
-    <source src="/blog/butterfly-playground/kids-playing.mp4" type="video/mp4">
+    <source src="/blog/diwali-2026/kids-playing.mp4" type="video/mp4">
   </video>
   <figcaption>The kids at the wall: lighting diyas, popping balloons together, catching sweets.</figcaption>
 </figure>
@@ -26,7 +26,7 @@ It ended up being a laptop, a phone and a projector, code written with Claude Co
 
 A phone on a stand watches the room. It sends video over my home Wi-Fi to a laptop. The laptop finds the people in the picture, works out where they are on the wall, and draws the game. The game window goes to the projector.
 
-![The phone sends video to the laptop, which finds hands or bodies, maps camera positions to wall positions, and draws the game. The game window is shown by the projector, whose light the phone sees again.](../../assets/images/blog/butterfly-playground/03-how-it-works.svg)
+![The phone sends video to the laptop, which finds hands or bodies, maps camera positions to wall positions, and draws the game. The game window is shown by the projector, whose light the phone sees again.](../../assets/images/blog/diwali-2026/03-how-it-works.svg)
 
 I set two rules at the start and they shaped a lot of choices. It all runs on the laptop: no cloud service, no account, no paid API. And no recording: video frames exist in memory long enough to be looked at, and then they're gone. There are kids in that picture, and I didn't want the project to be the reason their faces ended up on someone's server.
 
@@ -36,13 +36,13 @@ The projector is a big, bright, slightly dumb rectangle. I plugged it in over HD
 
 HDMI trails a cable across the room, so I also tried casting. The projector has its own browser, but it has no mouse and the camera page needs a secure address, so that went badly. What worked was boring: in Chrome on the laptop, Cast, then Cast tab, pick the projector. I'd spent a while on the harder idea before trying the obvious one. Casting costs CPU, though, as the speed section below shows.
 
-![The project's projector setup page: type the throw ratio and the distance to the wall, and it works out how big the picture will be.](../../assets/images/blog/butterfly-playground/02-projector-setup.png)
+![The project's projector setup page: type the throw ratio and the distance to the wall, and it works out how big the picture will be.](../../assets/images/blog/diwali-2026/02-projector-setup.png)
 
 *The projector setup page. You type the throw ratio and the distance to the wall and it tells you how big the picture will be.*
 
 A projector doesn't know your wall, and neither does the camera, so the app has to be told where the wall is. You mark the four corners of the projected picture in the camera's view, and from then on a hand seen by the camera can be placed on the wall. The same calibration also lets the projected picture be cut into pieces and bent to fit different parts of a wall, such as framed videos on a panelled wall. That's a side quest I haven't done yet, and this post is about the game.
 
-![The calibration page: four numbered handles dragged onto the corners of the projected picture in the camera's view, with a test area showing where a hand lands.](../../assets/images/blog/butterfly-playground/16-calibration.png)
+![The calibration page: four numbered handles dragged onto the corners of the projected picture in the camera's view, with a test area showing where a hand lands.](../../assets/images/blog/diwali-2026/16-calibration.png)
 
 *The calibration page. The camera's view is on the left with four handles on the corners of the picture, and the green grid on the right is what the projector draws.*
 
