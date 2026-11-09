@@ -8,7 +8,7 @@ tldr:
   - "Hand tracking worked on a photo and struggled on a real wall. Kids touch the wall, so their hands are edge-on, curled, or the back of a fist."
   - "Tracking the whole body and using the wrists as hands felt much better, and the kids enjoyed it. The price is speed: it's heavy on an old laptop."
   - "I planned to tell children apart with printed badges, then skipped the experiment. The kids were already having fun, and I ran out of time."
-  - "It's all local and meant to be reproducible. Code and steps will be on GitHub."
+  - "It's all local and meant to be reproducible. The code and steps are on GitHub (Mayuresh1m2/ProjectorGame)."
 ---
 
 This started with a small idea: could I make something for the kids for Diwali that wasn't another screen they hold? A wall that notices them, with butterflies that come to a hand, diyas that light up when you stand near them, fireworks you can launch by jumping.
@@ -98,11 +98,13 @@ It got things wrong too. It was confident about removing a faint watermark from 
 
 ## Try it yourself
 
+The code is at [github.com/Mayuresh1m2/ProjectorGame](https://github.com/Mayuresh1m2/ProjectorGame).
+
 You need a laptop, a phone and anything that makes a bright rectangle, even the laptop screen. A projector is nicer, but the games run in a normal window and work with a mouse before you touch a camera.
 
 ```bash
-git clone <repo-url>      # the link will be here once the code is public
-cd <repo-folder>
+git clone https://github.com/Mayuresh1m2/ProjectorGame.git
+cd ProjectorGame
 scripts/setup.sh      # once: Python environment, dependencies, pose model
 scripts/start.sh      # run the server
 scripts/doctor.sh     # anytime: what's wrong, and how to fix it
